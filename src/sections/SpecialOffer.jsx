@@ -1,11 +1,12 @@
 import { arrowRight } from "../assets/icons"
 import Button from "../components/Button"
+import { offer } from "../assets/images"
 
 const SpecialOffer = () => {
   return (
     <div className="flex gap-8 wide:flex-row flex-col-reverse">
       <div className="flex flex-1 items-center justify-center">
-        <img src="src\assets\images\offer.svg" alt="" />
+        <img src={offer} alt="" />
       </div>
       <div className="flex flex-1 flex-col justify-center">
         <h2 className="font-semibold font-palanquin leading-normal text-4xl text-coral-red capitalize">special
