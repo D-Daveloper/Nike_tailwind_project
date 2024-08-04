@@ -1,8 +1,11 @@
 import {headerLogo} from "../assets/images";
 import {hamburger} from "../assets/icons";
 import { navLinks } from "../constants/index";
+import { useState } from "react";
 
 const Nav = () => {
+
+    const [nav,setNav] = useState(false)
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
         <nav className="flex justify-between items-center max-container">
@@ -19,8 +22,14 @@ const Nav = () => {
                     </li>
                 ))}
             </ul>
-            <div className="lg:hidden block ">
-                <div className="w-10 h-1 bg-slate-gray before:w-10 before:h-1 before:translate-y-4 before:content-[''] before:translate-x-0 before:absolute before:bottom-12 before:bg-slate-gray after:w-10 after:h-1 after:-translate-y-4 after:content-[''] after:translate-x-0 after:absolute after:top-12 after:bg-slate-gray "></div>
+            <div onClick={()=>{
+                    if (!nav) {
+                        setNav(true)
+                    }else{
+                        setNav(false)
+                    }
+                }} className={"lg:hidden relative top-0 bottom-0 w-8 h-8 items-center flex" + (nav? ' toggle-btn': '')}>
+                <div className="nav"></div>
             </div>
         </nav>
     </header>

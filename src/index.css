@@ -21,6 +21,9 @@
   .input {
     @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
   }
+  .nav{
+    @apply absolute w-8 h-1 bg-slate-gray before:w-8 before:h-1 before:translate-y-2 before:content-[''] before:translate-x-0 before:absolute before:bg-slate-gray after:w-8 after:h-1 after:-translate-y-2 after:content-[''] after:translate-x-0 after:absolute after:bg-slate-gray transition-all duration-500 before:duration-500 after:duration-500 before:transition-all after:transition-all;
+  }
 }
 
 @layer utilities {
@@ -56,6 +59,6 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
   .toggle-btn{
-    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[360deg]
 }
 }
