@@ -15,11 +15,10 @@ const SpecialOffer = () => {
         <p className="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray">Embark on a shopping journey that redefines your experience with unbeatable deals. From premier selections to incredible savings, we offer unparalleled value that sets us apart.</p>
         <p className="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray">Navigate a realm of possibilities designed to fulfill your unique desires, surpassing the loftiest expectations. Your journey with us is nothing short of exceptional.</p>
         <div className="mt-10 flex gap-5">
-          <div className="flex bg-coral-red rounded-full text-white items-center">
             <Button label="show now"
+            icon={true}
+            color={true}
             />
-            <img src={arrowRight} alt="" className="-ml-3 mr-5 w-5 h-5 "/>
-          </div>
           <div className="">
             <Button label={"view more"}
             border={true}/>

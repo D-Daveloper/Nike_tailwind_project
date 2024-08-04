@@ -20,9 +20,7 @@ const Nav = () => {
                 ))}
             </ul>
             <div className="lg:hidden block ">
-                <img src={hamburger} alt="" width={25} height={25} 
-                
-                />
+                <div className="w-10 h-1 bg-slate-gray before:w-10 before:h-1 before:translate-y-4 before:content-[''] before:translate-x-0 before:absolute before:bottom-12 before:bg-slate-gray after:w-10 after:h-1 after:-translate-y-4 after:content-[''] after:translate-x-0 after:absolute after:top-12 after:bg-slate-gray "></div>
             </div>
         </nav>
     </header>

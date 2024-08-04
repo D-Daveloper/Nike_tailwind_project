@@ -18,10 +18,11 @@ const Hero = () => {
         <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm ">
           Discover stylish Nike arrivals,quality comfort, and innovation for your active life.
         </p>
-        <div className="flex bg-coral-red rounded-full text-white">
+        <div className="flex bg-coral-red rounded-full text-white hover:bg-[#EA4411]">
         <Button label="show now"
+        color={true}
+        icon={true}
         />
-        <img src={arrowRight} alt="" className="-ml-3 pr-7"/>
         </div>
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((items,index)=>{
