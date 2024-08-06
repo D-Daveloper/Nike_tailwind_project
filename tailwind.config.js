@@ -40,13 +40,17 @@ export default {
       },
       keyframes: {
         'open-menu': {
-          '0%': { transform: 'scaleY(0)' },
-          '80%': { transform: 'scaleY(1.2)' },
-          '100%': { transform: 'scaleY(1)' },
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'close-menu': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       },
       animation: {
         'open-menu': 'open-menu 0.5s ease-in-out forwards',
+        'close-menu': 'close-menu 0.5s ease-in-out forwards',
       },
     },
   },

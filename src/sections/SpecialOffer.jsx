@@ -19,9 +19,9 @@ const SpecialOffer = () => {
             icon={true}
             color={true}
             />
-          <div className="">
-            <Button label={"view more"}
-            border={true}/>
+            <div className="">
+              <Button label={"view more"}
+              border={true}/>
             </div>
         </div>
       </div>

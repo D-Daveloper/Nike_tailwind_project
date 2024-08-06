@@ -15,8 +15,8 @@ const Footer = () => {
 
             {socialMedia.map((item,index)=>{
               return(
-                <div className="flex bg-white rounded-full mt-5 w-12 h-12 justify-center items-center">
-                <img className="" src={item.src} alt={item.alt} width={30} height={30} />
+                <div key={index} className="flex bg-white rounded-full mt-5 w-12 h-12 justify-center items-center">
+                <img key={index} className="" src={item.src} alt={item.alt} width={30} height={30} />
                 </div>
               )
             })}
@@ -26,7 +26,7 @@ const Footer = () => {
 
         <div className="flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap">
           {footerLinks.map((item,index) =>{
-            return(<FooterCard text={item.title} links={item.links} />)
+            return(<FooterCard key={index} text={item.title} links={item.links} />)
           })}
 
 

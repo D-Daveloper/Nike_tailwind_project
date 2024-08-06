@@ -1,11 +1,34 @@
 import { Hero,Footer,SpecialOffer,SuperQuality,CustomerReviews,Subcribe,PopularProducts,Services } from "./sections";
 import Nav from "./components/Nav";
+import { useState,useEffect } from "react";
 
-const App = () => (
+
+
+const App = () => {
+  const [index,setIndex] = useState(false)
+    useEffect(() => {
+      if (index) {
+        document.body.classList.add('stop-scrolling');
+      } else {
+        document.body.classList.remove('stop-scrolling');
+      }
+  
+      return () => {
+        document.body.classList.remove('stop-scrolling');
+      };
+    }, [index])
+
+  return (
   <main className="relative">
-    <Nav />
+
+    <Nav 
+    index={index}
+    set={setIndex}
+    />
     <section className="xl:padding-l wide:padding-r padding-b">
-      <Hero />
+      <Hero 
+
+      />
     </section>
     <section id="products" className="xl:padding-l wide:padding-r padding-b padding-x py-8 w-full">
       <PopularProducts />
@@ -30,6 +53,7 @@ const App = () => (
     </section>
 
   </main>
-);
+)
+};
 
 export default App; 

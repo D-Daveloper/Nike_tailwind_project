@@ -5,24 +5,24 @@ import ShoeCard from "../components/ShoeCard"
 import { shoes, statistics } from "../constants"
 import { useState } from "react"
 
-const Hero = () => {
+const Hero = ({index}) => {
   const [BigShoe, setBigShoe] = useState(bigShoe1)
   return (
     <section id="home" className="w-full flex flex-col xl:flex-row justify-center min-h-screen p-2 gap-10 max-container">
 
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red">Our summer collection</p>
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold"><span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">The New Arrival </span>
+        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold"><span className={"xl:bg-white xl:whitespace-nowrap relative pr-10 z-10 max-lg:z-0"}>The New Arrival </span>
         <br />
         <span className="text-coral-red inline-block mt-3"> Nike </span> Shoes</h1>
         <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm ">
           Discover stylish Nike arrivals,quality comfort, and innovation for your active life.
         </p>
-        <div className="flex bg-coral-red rounded-full text-white hover:bg-[#EA4411]">
-        <Button label="show now"
-        color={true}
-        icon={true}
-        />
+        <div>
+        <Button label="shop now"
+            icon={true}
+            color={true}
+            />
         </div>
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((items,index)=>{
